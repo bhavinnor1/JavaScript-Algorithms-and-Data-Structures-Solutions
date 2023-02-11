@@ -1,0 +1,24 @@
+function palindrome(str) {
+  let str2=str.toLowerCase();
+  let reverseString="";
+  let str3="";
+  let num=[1,2,3,4,5,6,7,8,9,0]
+  for (let i=0;i<str2.length;i++){
+    if (/^[A-Z]$/i.test(str2[i]) || str2[i] in num){
+      str3=str3+str2[i];
+    }
+  }
+  for (let i=str.length;i>=0;i--){
+    if (/^[A-Z]$/i.test(str2[i]) || str[i] in num){
+    reverseString= reverseString+str2[i];
+  }
+  }
+  if (str3==reverseString){
+    return true;
+  }
+  
+  return false;
+
+}
+
+palindrome("eye");
